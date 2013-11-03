@@ -1,0 +1,48 @@
+<Body:>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/ace/1.1.01/noconflict/ace.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+
+  <div class="row">
+    <form class="span3" x-bind="submit: list.add">
+      <h3>Add item</h3>
+      <fieldset>
+        <label>Name</label>
+        <input type="text" value={_page.newItem.name}>
+        <label>Note</label>
+        <textarea>{_page.newItem.note}</textarea>
+        <label>Code</label>
+        <div class=codeField>
+          <textarea class=codeField-generic>{_page.newItem.code}</textarea>
+          <div class=codeField-rich></div>
+        </div>
+
+        <div>
+          <button type="submit" class="btn">Add</button>
+        </div>
+      </fieldset>
+      <div class="well visits">
+        <b>Fun fact:</b> You've visited the list {_page.user.visits} times.
+      </div>
+    </form>
+    <div class="span8 offset1">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Note</th>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each _page.items as :item}
+            <tr>
+              <td>{{:item.name}}</td>
+              <td>{{:item.note}}</td>
+              <td>{{:item.code}}</td>
+              <td><button class="btn" x-bind="click: list.remove">Remove</button></td>
+            </tr>
+          {/}
+        </tbody>
+      </table>
+    </div>
+  </div>
