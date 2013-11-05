@@ -8,9 +8,16 @@
         <input type="text" value={_page.newItem.name}>
         <label>Note</label>
         <textarea>{_page.newItem.note}</textarea>
-        <label>Code</label>
-        <div class=codeField>
-          <textarea class=codeField-generic>{_page.newItem.code}</textarea>
+
+        <div class=codeField data-field-type=newItem.html>
+          <label>HTML</label>
+          <textarea class=codeField-generic>{_page.newItem.html}</textarea>
+          <div class=codeField-rich></div>
+        </div>
+
+        <div class=codeField data-field-type=newItem.css>
+          <label>CSS</label>
+          <textarea class=codeField-generic>{_page.newItem.css}</textarea>
           <div class=codeField-rich></div>
         </div>
 
@@ -28,7 +35,8 @@
           <tr>
             <th>Item</th>
             <th>Note</th>
-            <th>Code</th>
+            <th>HTML</th>
+            <th>CSS</th>
           </tr>
         </thead>
         <tbody>
@@ -36,7 +44,8 @@
             <tr>
               <td>{{:item.name}}</td>
               <td>{{:item.note}}</td>
-              <td>{{:item.code}}</td>
+              <td>{{:item.html}}</td>
+              <td>{{:item.css}}</td>
               <td><button class="btn" x-bind="click: list.remove">Remove</button></td>
             </tr>
           {/}
