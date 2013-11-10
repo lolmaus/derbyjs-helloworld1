@@ -9,17 +9,9 @@
         <label>Note</label>
         <textarea>{_page.newItem.note}</textarea>
 
-        <div class=codeField data-field-type=newItem.html>
-          <label>HTML</label>
-          <textarea class=codeField-generic>{_page.newItem.html}</textarea>
-          <div class=codeField-rich></div>
-        </div>
+        <ui:codeField name="HTML" value={_page.newItem.html}>
 
-        <div class=codeField data-field-type=newItem.css>
-          <label>CSS</label>
-          <textarea class=codeField-generic>{_page.newItem.css}</textarea>
-          <div class=codeField-rich></div>
-        </div>
+        <ui:codeField name="CSS" value={_page.newItem.css}>
 
         <div>
           <button type="submit" class="btn">Add</button>

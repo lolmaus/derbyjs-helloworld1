@@ -2,7 +2,8 @@ var config = {
   filename: __filename
 , styles: '../styles/ui'
 , scripts: {
-    connectionAlert: require('./connectionAlert')
+    connectionAlert: require('./connectionAlert'),
+    codeField: require('./codeField')
   }
 };
 
