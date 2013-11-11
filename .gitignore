@@ -1,8 +1,9 @@
+/node_modules
+/gen
+*.swp
+*.un~
+/data
 /.idea/workspace.xml
 .DS_Store
-*.swp
-/node_modules/
 .sass-cache
-/tmp/
-*.orig
 /bower_components/
