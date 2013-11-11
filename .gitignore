@@ -3,3 +3,7 @@
 *.swp
 *.un~
 /data
+/.idea/workspace.xml
+.DS_Store
+.sass-cache
+/bower_components/
