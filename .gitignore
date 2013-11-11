@@ -1,8 +1,5 @@
-/.idea/workspace.xml
-.DS_Store
+/node_modules
+/gen
 *.swp
-/node_modules/
-.sass-cache
-/tmp/
-*.orig
-/bower_components/
+*.un~
+/data

@@ -1,0 +1,4 @@
+export REDIS_HOST=${IP}
+export REDIS_PORT=6379
+export MONGO_URL=mongodb://${IP}:27017/project
+npm start
